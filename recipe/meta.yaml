@@ -1,20 +1,20 @@
 {% set name = "executor" %}
-{% set version = "21.3" %}
+{% set version = "22.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: ea8d4e914186d52e3902763be25bd3ae531cd720f0f07e7a211d76f2d6a326cc
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 596e8cf766eda61964609766abd14d02b9a6538c0159eb3980329c05d56e44bc
 
 build:
   number: 0
   noarch: python
   entry_points:
     - executor = executor.cli:main
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -36,13 +36,13 @@ test:
     - executor --help
 
 about:
-  home: "https://executor.readthedocs.io"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: "LICENSE.txt"
-  summary: "Programmer friendly subprocess wrapper"
-  doc_url: "https://executor.readthedocs.io/en/latest/"
-  dev_url: "https://github.com/xolox/python-executor"
+  home: https://executor.readthedocs.io
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.txt
+  summary: Programmer friendly subprocess wrapper
+  doc_url: https://executor.readthedocs.io/en/latest/
+  dev_url: https://github.com/xolox/python-executor
 
 extra:
   recipe-maintainers:
