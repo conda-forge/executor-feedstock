@@ -10,7 +10,7 @@ source:
   sha256: 596e8cf766eda61964609766abd14d02b9a6538c0159eb3980329c05d56e44bc
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - executor = executor.cli:main
