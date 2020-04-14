@@ -10,7 +10,7 @@ source:
   sha256: 596e8cf766eda61964609766abd14d02b9a6538c0159eb3980329c05d56e44bc
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - executor = executor.cli:main
@@ -23,8 +23,8 @@ requirements:
   run:
     - coloredlogs >=3.5
     - fasteners >=0.14.1
-    - humanfriendly >=3.5
-    - property-manager >=2.3
+    - humanfriendly >=8.0
+    - property-manager >=3.0
     - python
     - six >=1.9.0
 
