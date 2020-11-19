@@ -5,11 +5,13 @@ Home: https://executor.readthedocs.io
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/executor-feedstock/blob/master/LICENSE.txt)
 
 Summary: Programmer friendly subprocess wrapper
 
+Development: https://github.com/xolox/python-executor
 
+Documentation: https://executor.readthedocs.io/en/latest/
 
 Current build status
 ====================
