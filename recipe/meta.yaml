@@ -8,9 +8,13 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e1c6c18ceca9e64f3f9e691bc5271806037c9a96c01e683ce46c03494af6033d
+  # Patch adds support for Python 3.13
+  # Partial implementation from https://github.com/xolox/python-executor/pull/22, can remove if ever accepted
+  patches:
+    - "modern-python.patch"
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - executor = executor.cli:main
