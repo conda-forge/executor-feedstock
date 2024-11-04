@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e1c6c18ceca9e64f3f9e691bc5271806037c9a96c01e683ce46c03494af6033d
   # Patch adds support for Python 3.13
   # Partial implementation from https://github.com/xolox/python-executor/pull/22, can remove if ever accepted
@@ -23,13 +23,14 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
+    - setuptools
   run:
     - coloredlogs >=3.5
     - fasteners >=0.14.1
     - humanfriendly >=8.0
     - property-manager >=3.0
-    - python
+    - python >=3.6
     - six >=1.9.0
 
 test:
